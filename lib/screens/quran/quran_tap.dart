@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islamapp/screens/quran/sura_name_widget.dart';
 
-import '../my_theme.dart';
-
 class QuranTap extends StatelessWidget {
   List<String> suraName = [
     "الفاتحه",
@@ -136,7 +134,7 @@ class QuranTap extends StatelessWidget {
                     image: AssetImage("assets/images/smallimage.png"),
                     fit: BoxFit.fill)),
           ),
-        ),
+        ), // image
         Expanded(
           flex: 5,
           child: Column(
@@ -145,14 +143,11 @@ class QuranTap extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "اسم السورة",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
+                    Text("Chapter Name",
+                        style: Theme.of(context).textTheme.headline1),
                   ],
                 ),
-                color: MyTheme.primaryColor,
+                color: Theme.of(context).primaryColor,
                 height: 40,
               ),
               Expanded(
@@ -165,8 +160,10 @@ class QuranTap extends StatelessWidget {
                         },
                         separatorBuilder: (context, index) {
                           return Container(
-                            margin: EdgeInsets.symmetric(horizontal: 45),
-                            color: MyTheme.primaryColor,
+                            margin: EdgeInsets.symmetric(horizontal: 64),
+                            color: Theme
+                                .of(context)
+                                .accentColor,
                             height: 1,
                             width: double.infinity,
                           );
