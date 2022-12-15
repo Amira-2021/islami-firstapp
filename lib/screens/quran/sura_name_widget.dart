@@ -29,10 +29,7 @@ class SuraNameWidget extends StatelessWidget {
                     margin: EdgeInsets.all(5),
                     child: Text(
                       name,
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
+                      style: Theme.of(context).textTheme.headline6),
                   ),
                 ],
               ),
@@ -47,6 +44,5 @@ class SuraNameWidget extends StatelessWidget {
 class SuraNameWidgetArg {
   String name;
   int index;
-
   SuraNameWidgetArg({required this.name, required this.index});
 }
